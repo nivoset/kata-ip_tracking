@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1635684609267" clover="3.2.0">
+  <project timestamp="1635684609267" name="All files">
+    <metrics statements="37" coveredstatements="37" conditionals="8" coveredconditionals="8" methods="14" coveredmethods="14" elements="59" coveredelements="59" complexity="0" loc="37" ncloc="37" packages="1" files="5" classes="5"/>
+    <file name="generateClear.ts" path="C:\code\Kata\ip-tracker\src\generateClear.ts">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <line num="3" count="27" type="stmt"/>
+      <line num="4" count="13" type="stmt"/>
+    </file>
+    <file name="generateRequestHandled.ts" path="C:\code\Kata\ip-tracker\src\generateRequestHandled.ts">
+      <metrics statements="12" coveredstatements="12" conditionals="8" coveredconditionals="8" methods="3" coveredmethods="3"/>
+      <line num="3" count="915666" type="cond" truecount="2" falsecount="0"/>
+      <line num="7" count="2" type="stmt"/>
+      <line num="8" count="5" type="stmt"/>
+      <line num="9" count="5" type="stmt"/>
+      <line num="10" count="3614911" type="cond" truecount="4" falsecount="0"/>
+      <line num="13" count="3614911" type="stmt"/>
+      <line num="15" count="3614911" type="cond" truecount="1" falsecount="0"/>
+      <line num="16" count="948986" type="stmt"/>
+      <line num="18" count="948986" type="cond" truecount="1" falsecount="0"/>
+      <line num="19" count="9066" type="stmt"/>
+      <line num="22" count="9066" type="stmt"/>
+      <line num="23" count="9066" type="stmt"/>
+    </file>
+    <file name="generateTop100.ts" path="C:\code\Kata\ip-tracker\src\generateTop100.ts">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+      <line num="3" count="6" type="stmt"/>
+      <line num="4" count="9" type="stmt"/>
+      <line num="6" count="637" type="stmt"/>
+      <line num="8" count="212" type="stmt"/>
+    </file>
+    <file name="index.ts" path="C:\code\Kata\ip-tracker\src\index.ts">
+      <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="8" count="3" type="stmt"/>
+      <line num="10" count="3" type="stmt"/>
+      <line num="12" count="3" type="stmt"/>
+    </file>
+    <file name="pseudoRandom.ts" path="C:\code\Kata\ip-tracker\src\pseudoRandom.ts">
+      <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="700" type="stmt"/>
+      <line num="3" count="700" type="stmt"/>
+      <line num="4" count="700" type="stmt"/>
+      <line num="5" count="700" type="stmt"/>
+      <line num="6" count="700" type="stmt"/>
+      <line num="7" count="700" type="stmt"/>
+      <line num="8" count="700" type="stmt"/>
+      <line num="9" count="700" type="stmt"/>
+      <line num="10" count="700" type="stmt"/>
+      <line num="13" count="1" type="stmt"/>
+      <line num="14" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>
