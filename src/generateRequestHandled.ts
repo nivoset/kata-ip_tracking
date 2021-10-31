@@ -10,7 +10,7 @@ export const generateRequestHandled = (highVolumeTrackingData: Map<string, numbe
     const callCount = (trackingData.get(ipAddress)
         ?? 0) + 1;
         
-    trackingData.set(ipAddress, callCount + 1);
+    trackingData.set(ipAddress, callCount);
 
     if (callCount >= threshold) {
       highVolumeTrackingData.set(ipAddress, callCount);
