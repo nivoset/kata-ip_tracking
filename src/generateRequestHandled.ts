@@ -1,12 +1,13 @@
-import { GetLowestEntry, TrackingData, RequestHandled } from "./types";
+import { GetLowestEntry, RequestHandled, GenerateRequestHandled } from "./types";
 
-const getLowestEntry: GetLowestEntry = ([lowestIp, lowestCount]: TrackingData, [ip, count]: TrackingData) =>
-count < lowestCount ? [ip, count] : [lowestIp, lowestCount];
+const getLowestEntry: GetLowestEntry = ([lowestIp, lowestCount], [ip, count]) => count < lowestCount
+  ? [ip, count]
+  : [lowestIp, lowestCount];
 
 
-export const generateRequestHandled = (highVolumeTrackingData: Map<string, number>, trackingData: Map<string, number>) : RequestHandled => {
+export const generateRequestHandled: GenerateRequestHandled = (highVolumeTrackingData, trackingData) => {
   let threshold = 0;
-  return (ipAddress: string) => {
+  return (ipAddress) => {
     const callCount = (trackingData.get(ipAddress)
         ?? 0) + 1;
         

@@ -1,7 +1,10 @@
 
-
 export interface RequestHandled {
   (ipAddress: string): void;
+}
+
+export interface GenerateRequestHandled {
+   (highVolumeTrackingData: Map<string, number>, trackingData: Map<string, number>) : RequestHandled
 }
 
 export interface Top100 {
@@ -19,6 +22,7 @@ export interface Tracker {
 }
 
 export type TrackingData = [string, number];
+
 export interface GetLowestEntry {
   (currentLow: TrackingData, entry: TrackingData): TrackingData;
 }
