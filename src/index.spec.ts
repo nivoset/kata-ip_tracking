@@ -14,7 +14,7 @@ it('should generate a new tracker with no records', () => {
 
 it('should clear tracker when reset', () => {
   expect(tracker.top100()).toEqual([]);
-  tracker.requestHandled("ip");
+  tracker.request_handled("ip");
 
   expect(tracker.top100()).toEqual(["ip"]);
   tracker.clear();
@@ -25,16 +25,16 @@ it('should clear tracker when reset', () => {
 it('should give top 100 results', () => {
   var rand = pseudoRandomGenerator(1337 ^ 0xDEADBEEF);
   expect(tracker.top100()).toMatchSnapshot();
-  //generate 10000 pseudo-random requests and check if top 100 is correct
-  const requests = [];
-  for (let i = 0; i < 700; i++) {
-    const r = Math.floor(rand() * 10000);
-    requests.push([`ip index=${i} numberOfRequests=${r}`, r]);
-  }
-  requests.forEach(([ip, count]: any) => {
-    new Array(count).fill(ip)
-        .forEach(tracker.requestHandled)
-  });
+  // generate 10000 pseudo-random requests and check if top 100 is correct
+  // the "ip addresses" used are just strings of data showing index as well as number of 'calls'
+  const requests = new Array(700).fill(0)
+      .map(() => Math.floor(rand() * 10000))
+      .map((r, i) => [`ip index=${i} numberOfRequests=${r}`, r]);
 
+  requests.map(([ip, count]: any) => new Array(count).fill(ip))
+    .flat()
+    .forEach(tracker.request_handled);
+
+  // only used a snapshot here as the order of the top 100 is a large set of data
   expect(tracker.top100()).toMatchSnapshot();
 })

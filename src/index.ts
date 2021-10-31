@@ -10,7 +10,7 @@ export const generateTracker = (): Tracker => {
   const trackingData: Map<string, number> = new Map();
 
   return {
-    requestHandled: generateRequestHandled(highVolumeTrackingData, trackingData),
+    request_handled: generateRequestHandled(highVolumeTrackingData, trackingData),
     clear: generateClear(highVolumeTrackingData, trackingData),
     top100: generateTop100(highVolumeTrackingData),
   };

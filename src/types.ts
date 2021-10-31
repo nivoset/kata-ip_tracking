@@ -13,7 +13,7 @@ export interface Clear {
 }
 
 export interface Tracker {
-  requestHandled: RequestHandled;
+  request_handled: RequestHandled;
   top100: Top100;
   clear: Clear;
 }
