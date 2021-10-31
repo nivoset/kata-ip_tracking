@@ -1,7 +1,5 @@
 import { GetLowestEntry, TrackingData, RequestHandled } from "./types";
 
-
-
 const getLowestEntry: GetLowestEntry = ([lowestIp, lowestCount]: TrackingData, [ip, count]: TrackingData) =>
 count < lowestCount ? [ip, count] : [lowestIp, lowestCount];
 
@@ -13,6 +11,7 @@ export const generateRequestHandled = (highVolumeTrackingData: Map<string, numbe
         ?? 0) + 1;
         
     trackingData.set(ipAddress, callCount + 1);
+
     if (callCount >= threshold) {
       highVolumeTrackingData.set(ipAddress, callCount);
       // clear out the lowest entry if you have more than 100 entries
