@@ -10,6 +10,6 @@ const sfc32 = (a: number, b: number, c: number, d: number) => () => {
     return (t >>> 0) / 4294967296;
   };
 
-export const pseudoRandomGenerator = (seed = 1337) => {
+export const pseudoRandomGenerator = (seed: number) => {
   return sfc32(0x9E3779B9, 0x243F6A88, 0xB7E15162, seed ^ 0xDEADBEEF);
 }

@@ -29,7 +29,7 @@ it('should give top 100 results', () => {
   const requests = [];
   for (let i = 0; i < 700; i++) {
     const r = Math.floor(rand() * 10000);
-    requests.push([`ip ${i} ${r}`, r]);
+    requests.push([`ip index=${i} numberOfRequests=${r}`, r]);
   }
   requests.forEach(([ip, count]: any) => {
     new Array(count).fill(ip)
