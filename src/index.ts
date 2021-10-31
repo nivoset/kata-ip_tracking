@@ -1,17 +1,8 @@
-import { generateClear } from './generateClear';
-import { generateTop100 } from './generateTop100';
-import { Tracker } from './types'
-import { generateRequestHandled } from './generateRequestHandled';
+import { generateTracker } from './generateTracker'
 
-export const generateTracker = (): Tracker => {
-  // keep high volume tracking data in a separate map for quick access
-  const highVolumeTrackingData: Map<string, number> = new Map();
-  // keep all tracking data here
-  const trackingData: Map<string, number> = new Map();
 
-  return {
-    request_handled: generateRequestHandled(highVolumeTrackingData, trackingData),
-    clear: generateClear(highVolumeTrackingData, trackingData),
-    top100: generateTop100(highVolumeTrackingData),
-  };
-}
+const { clear, top100, request_handled } = generateTracker()
+
+request_handled('127.0.0.1')
+console.log(top100())
+clear()

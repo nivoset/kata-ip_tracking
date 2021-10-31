@@ -1,4 +1,4 @@
-import { generateTracker } from './index'
+import { generateTracker } from './generateTracker'
 import { Tracker } from './types';
 import { pseudoRandomGenerator } from './pseudoRandom'
 
